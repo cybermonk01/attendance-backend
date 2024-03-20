@@ -36,6 +36,10 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/events", require("./routes/events.js"));
+app.get("/", (req, res) => {
+  console.log("ahdsidj");
+  res.send("Hellp beta");
+});
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/index.html"));
 });
